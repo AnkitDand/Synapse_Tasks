@@ -1,0 +1,502 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080808;
+  color: #fff;
+}
+
+#header {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url(bg.jpg);
+}
+
+.container {
+  padding: 0px 15px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 110px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #ff0011;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.75s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header-text {
+  margin-top: 15%;
+  font-size: 25px;
+  display: inline-block;
+}
+
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+  display: inline-block;
+  border-right: 5px solid;
+  border-color: transparent;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(20), cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+/* About                                                                                         */
+
+#about {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("about_bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container1 {
+  padding: 30px 100px;
+  text-align: center;
+}
+article h1 {
+  font-size: 50px;
+  font-weight: 800;
+}
+article h1:after {
+  content: "";
+  height: 4px;
+  width: 225px;
+  background-color: white;
+  display: block;
+  margin: auto;
+}
+.container1 img {
+  width: 175px;
+  margin-top: 60px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+blockquote {
+  font-family: cursive;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+article h5 {
+  font-size: 27px;
+  margin-top: 30px;
+  font-family: serif;
+}
+article p {
+  font-size: 18px;
+  margin-top: 5px;
+  font-family: cursive;
+}
+
+/* projects                                              */
+
+#projects {
+  padding: 50px 50px;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 60px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer {
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 40, 40, 0.8));
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  transition: 0.6s;
+}
+
+.layer h2 {
+  margin-bottom: 20px;
+}
+
+.layer a {
+  margin-top: 20px;
+  color: rgb(255, 40, 40);
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: centre;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+/* skills                                                 */
+
+#skills {
+  margin: 50px 40px;
+  padding: 22px 0;
+  /* background: #ff0011; */
+}
+
+#skills .mh-professional-skill {
+  padding-right: 50px;
+  padding-left: 50px;
+  color: white;
+}
+
+#skills .mh-professional-skill h3 {
+  font-size: 30px;
+  width: 400px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.mh-professional-skills h3 {
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.mh-professional-progress li {
+  display: inline-block;
+  margin: 0 auto;
+  float: none;
+  width: 48%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.mh-progress {
+  margin-bottom: 10px;
+  font: 900 1.14285/1;
+  color: white;
+}
+
+.candidatos {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.candidatos .parcial {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+.candidatos .parcial .info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.candidatos .parcial .info .name {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 15;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.candidatos .parcial .info .name .percentage-num {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.candidatos .parcial .progressBar {
+  position: relative;
+  width: 100%;
+  height: 7px;
+  margin: 5px 0 2px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.candidatos .parcial .percentagem {
+  position: absolute;
+  text-align: right;
+  top: 0;
+  left: 0;
+  height: 7px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgb(255, 40, 40);
+}
+
+.con {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 0 100px;
+  text-align: center;
+}
+
+.con .mh-professional-skills {
+  width: 100%;
+}
+
+.con .progress {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  color: white;
+  background: #969696 linear-gradient(to right, transparent 50%, var(--clr) 0);
+}
+
+.con .progress h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+  z-index: 1;
+  font-weight: 500;
+}
+
+.con .progress h3 span {
+  font-size: 0.65em;
+  font-weight: 400;
+}
+
+.con .progress h4 {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-weight: 500;
+  color: var(--clr);
+  font-family: cursive;
+}
+
+.con .progress::before {
+  content: "";
+  display: block;
+  height: 100%;
+  margin-left: 50%;
+  transform-origin: left;
+  border-radius: 0 100% 100% 0/50%;
+}
+
+.con .progress::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+  background: #080808;
+}
+
+.con .progress::before {
+  background: var(--clr);
+  transform: rotate(calc(((var(--i) - 50) * 0.01turn)));
+}
+
+.con .progress.less::before {
+  background: #969696;
+  transform: rotate(calc(((var(--i) - 0) * 0.01turn)));
+}
+
+/* contact                                                                          */
+.container4 {
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left {
+  flex-basis: 35%;
+}
+
+.right {
+  flex-basis: 60%;
+}
+
+.left h1 {
+  font-size: 60px;
+}
+
+.left p {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.left p i {
+  color: rgb(255, 40, 40);
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.social a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: white;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.social a:hover {
+  color: rgb(255, 40, 40);
+  transform: translateY(-5px);
+}
+
+.resume {
+  display: block;
+  margin: 20px 0px;
+  width: fit-content;
+  border: solid rgb(255, 40, 40);
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  background: transparent;
+  transition: 1s;
+}
+
+.resume:hover {
+  background: rgb(255, 40, 40);
+}
+.right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #484848;
+  padding: 15px;
+  margin: 28px 0;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+.btn2 {
+  display: block;
+  margin: 20px 0px;
+  font-size: 17px;
+  border: solid rgb(255, 40, 40);
+  padding: 14px 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  background: rgb(255, 40, 40);
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 40px;
+}
